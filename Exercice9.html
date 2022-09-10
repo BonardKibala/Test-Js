@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes d'une claisse</title>
+    <script>
+        var matieres = ["Math", "Physique", "Informatique", "Algorithmique", "EOE", "Educit", "Javascript"];
+        var notes_Classes = [];
+        var nbre_Eleves = prompt("Combien d'élèves avez-vous?");
+
+        for (let i = 0; i < matieres.length; i++) {
+            for (let j = 1; j <= nbre_Eleves; j++) {
+                notes_Classes.push(Number(prompt("entrez la note du cours de: " + matieres[i] + " pour l'Elève n°" + j)));
+        }
+        }
+
+        var moyenne_Classes, sommes_notes = 0, notes_Sup = "";
+        for (let i = 0; i < notes_Classes.length; i++) {
+            sommes_notes += notes_Classes[i];
+        }
+        moyenne_Classes = Number(sommes_notes) / notes_Classes.length;
+
+        for (let i = 0; i < notes_Classes.length; i++) {
+            if (notes_Classes[i]>moyenne_Classes) {
+                notes_Sup +=">" + notes_Classes[i] + "\n";
+            }
+        }
+        alert("Les notes supérieures à la moyenne sont:\n" + notes_Sup);
+    </script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrangement</title>
+  </head>
+  <body>
+    <script>
+      var factoriel1, factoriel2, arrangement, nombrePosts, nombreCandidates;
+      function factoriel(nombre) {
+        let resultat = 1;
+        for (let i = 2; i <= nombre; i++) {
+          resultat = resultat * i;
+        }
+        return resultat;
+      }
+      function validate(message) {
+        var nombre;
+        do {
+          nombre = prompt(message);
+          if (nombre < 0) {
+            alert("vous pouvez pas inserer un nombre negatif");
+          } else if (isNaN(nombre)) {
+            alert("valeur non valide !");
+          } else if (nombre == "") {
+            alert("Champ vide ! veuillez inserer un nombre !");
+          }
+        } while (nombre < 0 || isNaN(nombre) || nombre == "");
+        return parseInt(nombre);
+      }
+      function monArrangement(postes, candidats) {
+        if (postes > candidats) {
+          return 0;
+        } 
+          var denominateur = candidats - postes;
+          var fac1 = factoriel(denominateur);
+          var fac2 = factoriel(candidats);
+          return fac2 / fac1 
+      }
+      nombrePosts = validate("Inserer le nombre de poste : ");
+      nombreCandidates = validate("Inserer le nombre de candidats : ");
+      // factoriel1 = factoriel(nombreCandidates);
+      // var sousnombre = nombreCandidates - nombrePosts;
+      // factoriel2 = factoriel(sousnombre);
+      // arrangement = factoriel1 / factoriel2;
+      arrangement  = monArrangement(nombrePosts, nombreCandidates);
+      alert(
+        " Arragement de " +
+          nombreCandidates +
+          " parmi les " +
+          nombrePosts +
+          " vaut:" +
+          arrangement
+      );
+    </script>
+  </body>
+</html>

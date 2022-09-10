@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice-js 21</title>
+</head>
+<body>
+    <h1>ExerciceJS 21</h1>
+    <script>                                                                                                                                                                                                                                                                                                                                                                                                    dans le dictionnaire préalablement créé dans le programme*/
+        var dico = [
+            "faire",
+            "aller",
+            "papa",
+            "lili",
+            "ben",
+        ];
+        var mot;
+        var continuer;
+        var msg;
+        while (true) {
+            mot = prompt("Entrez un mot!");
+            msg = mot + " n\'existe pas dans le dictionnaire";
+            for (var i = 0; i < dico.length; i++) {
+                if (mot == dico[i]) {
+                    msg = mot + " existe dans le dictionnaire";
+                    break;
+                }
+            }
+            alert(msg);
+            continuer = confirm("Continuer?");
+            if (continuer) {
+                continue;
+            } else {
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

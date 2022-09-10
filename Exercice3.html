@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opérations arithmétiques</title>
+    <script>
+        do {
+            var nombre1 = prompt("Entrez la première valeur");
+        } while (nombre1=="" || isNaN(nombre1));
+        do {
+            var nombre2 = prompt("Entrez la deuxième valeur");
+        } while (nombre2=="" || isNaN(nombre2));
+         nombre1 = Number(nombre1);
+         nombre2=Number(nombre2);
+        var multiplication = "Multiplication de 2 nombres: \n> " + nombre1 +"*" + nombre2 + " = " + (nombre1 * nombre2) + "\n\n";
+        var addition = "Addition de 2 nombres: \n> " + nombre1 + "+" + nombre2 + " = " +(nombre1 + nombre2) + "\n\n";
+        var soustraction = "Soustraction de 2 nombres: \n> " + nombre1 +"-" + nombre2 + " = " +(nombre1 - nombre2) + "\n\n";
+        var division = "Division de 2 nombres: \n> " + nombre1 +"/" + nombre2 + " = " + (nombre1 / nombre2) + "\n";
+        alert(""+ multiplication +"" + addition +""+soustraction+""+division);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

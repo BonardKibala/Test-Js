@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de la factorielle d'un nombre</title>
+    <script>
+        do {
+            var nombre = prompt("entrez votre nombre");
+            if (nombre < 0) {
+                alert(nombre + " est négatif, pas de négatif");
+            }
+            else if (isNaN(nombre)) {
+                alert("Veuillez saisir un nombre, pas de chaine de caractères ou caractère svp");
+            }
+            else if (nombre == "") {
+                alert("Pas de vide svp");
+            }
+        } while (nombre < 0 || nombre == "" || isNaN(nombre));
+
+        var factoriel = 1;
+        var MaVraieValeur = nombre;
+
+        while (nombre != 0) {
+            factoriel *= nombre;
+            nombre = nombre - 1;
+        }
+        alert("la factorielle de " + MaVraieValeur + " vaut: " + factoriel);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

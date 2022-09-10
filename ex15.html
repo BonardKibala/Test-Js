@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement impôt</title>
+    <script>
+        var age;
+        var gender;
+        alert("Tapez Homme (M) ou Femme (F)");
+        do{
+            gender = prompt("Enter votre genre");
+            age = Number(prompt("Votre age"));
+            if(gender != "M" && gender != "F"){
+                alert("Le genre doit etre Homme ou Femme");
+            }
+            else if(age == "" && gender == ""){
+                alert("Les champs sont vides");
+            }else if(isNaN(age)){
+                alert("L'age ne doit pas etre un nombre");
+            }
+            else if(age < 0){
+                alert("L'age est inferieur a zero");
+            }
+        }while(age == "" || isNaN(age) || age < 0 || gender == "" || (gender != "M" && gender != "F"))
+
+        if(gender == "M" && age >= 20){
+            alert("Vous etes elligible a l'impot");
+        }else if(gender == "F" && age >= 18 && age <= 35){
+            alert("Vous etes elligible a l'impot");
+        }else{
+            alert("Vous n'etes pas elligible");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

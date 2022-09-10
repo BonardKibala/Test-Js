@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var tab = [];
+        var tab2 = [];
+        var taille;
+        const message = "entrez la valeur";
+        do {
+            taille = prompt("entrer la taille du tableau")
+            if (isNaN(taille)) {
+                alert("entrez un chiffre");
+            } else if (taille == "") {
+                alert(message)
+            }
+        }
+        while (isNaN(taille) || taille == "")
+        if (taille < 0) {
+            taille = taille * (-1);
+        }
+        for (var i = 0; i < taille; i++) {
+            var ajoute = prompt(message);
+            tab.push(Number(ajoute))
+            tab2[taille - i - 1] = tab[i];
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

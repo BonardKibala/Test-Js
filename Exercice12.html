@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remplissage d'un tableau</title>
+    <script>
+        var taille_Tableau = prompt("Entrez le nombre des valeurs à saisir");
+        taille_Tableau=Number(taille_Tableau)
+        var tableau = [];
+        var negatif=0;
+        var positif=0;
+
+        for (let i = 1; i <= taille_Tableau; i++) {
+            tableau.push(Number(prompt("Entrez la valeur n°" + i)));
+        }
+        for (let i = 0; i < tableau.length; i++) {
+            if (tableau[i]<0) {
+                negatif ++;
+            }
+            else {
+                positif ++;
+        }
+        }
+        alert("Il y a :\n" + "> "+ positif +" valeurs positifs \n" + "> "+ negatif +" valeurs négatifs");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

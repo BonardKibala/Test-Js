@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul du carré d'un nombre</title>
+    <script>
+        do {
+            var nombre=prompt("Veuillez entrez un nombre");
+            if (nombre=="") {
+                alert("Le vide est interdit")
+            }
+            else if (isNaN(nombre)) {
+                alert("Veuillez entrez un nombre.\nPas de chaines SVP");
+            }
+        } while (nombre=="" || isNaN(nombre));
+        
+        var carre= Math.pow(nombre,2);
+
+        alert("Le carré de " + nombre + " vaut: " + carre);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

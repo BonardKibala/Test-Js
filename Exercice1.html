@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Toutes Taxes Comprises</title>
+    <script>
+        var Prix_HT_Article = [];var Nbre_Articles;var Tva;var TTC1 = [];var TTC = 0;
+        
+        do {
+            Nbre_Articles = prompt("Combien d'articles avez-vous acheté");
+        } while (Nbre_Articles < 0 || Nbre_Articles == 0 || isNaN(Nbre_Articles) || Nbre_Articles == "")
+
+        //  do {
+             
+        // } while (Prix_HT_Article[i]<0 || Prix_HT_Article[i]==0 || isNaN(Prix_HT_Article[i]) || Prix_HT_Article[i]=="")
+        
+        for (let i = 1; i <= Nbre_Articles; i++) {
+            Prix_HT_Article.push(prompt("Prix Hors Taxe (HT) de l'article  N°" + i));
+        }
+
+        do {
+            var Tva = prompt("Entrez la taxe sur la valeur ajoutée (TVA)");
+        } while (Tva < 0 || Tva == 0 || isNaN(Tva) || Tva == "")
+         
+        var facture = "";
+        for (let j = 0; j < Prix_HT_Article.length; j++) {
+            TTC1.push(Number(Prix_HT_Article[j]) * ( 1 + (Number(Tva) / 100)));
+            TTC = (Number(TTC) + Number(Prix_HT_Article[j]) * ( 1 + (Number(Tva) / 100)));
+            facture += ">" +" Article N°" + "" + (j+1) + "" + ": " +TTC1[j] +"Fc \n";
+        }
+        alert("Les différents prix Toutes Taxes Comprises(TTC) pour vos achats sont: \n" + facture + "\n" + "\nLe TTC Total vaut:\n > " + TTC+ "Fc");
+    </script>
+</head>
+<body>
+</body>
+</html>

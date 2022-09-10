@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var nbr1 = parseInt(prompt("Entre un nombre"));
+        alert("vous avez saisi un nombre 10 - 20");
+        var ligne = "\n********************************\n";
+        var b = (nbr1 >= 10 && nbr1 <= 20);
+        while (!b) {
+            if (nbr1 <= 9) {
+                nbr1 = parseInt(prompt(ligne + "\"PLUS GRAND\" \n Nouveau essaie Entre un nombre"));
+            } else {
+                nbr1 = parseInt(prompt(ligne + "\"PLUS PETIT\" \n Nouveau essaie Entre un nombre"));
+            }
+        }
+        alert("BRAVO");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit négatif ou positif</title>
+    <script>
+        do {
+            var nombre1 = prompt("entrez le premier nombre");
+        } while (isNaN(nombre1));
+        do {
+            var nombre2 = prompt("entrez le deuxième nombre");
+        } while (isNaN(nombre2));
+        nombre1=Number(nombre1); nombre2=Number(nombre2);
+        var produit=nombre1*nombre2;
+        if (produit>0) {
+            alert("Le produit est positif")
+        }
+        else if (produit<0) {
+            alert("Le produit est négatif")
+        }
+        else if (nombre==0) {
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

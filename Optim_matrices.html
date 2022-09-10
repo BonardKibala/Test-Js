@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrice</title>
+</head>
+
+<body>
+    <script>
+        var tailleMatrice;
+        var Matrice1 = [];
+        var Matrice2 = [];
+        var Matrice3 = [];
+       
+        tailleMatrice = prompt("taille de la matrice ");
+        alert("Mattrice 1")
+        var j = 0;
+        var k = 0;
+        Matrice1[j] = [];
+        for (let i = 0; i < tailleMatrice ** 2; i++) {
+            k = i % tailleMatrice
+            Matrice1[j].push(Number(prompt("Entrer l'élement " + "[" + j + "," + (k) + "]")));
+            if (((i + 1) % tailleMatrice) == 0 && (i + 1) < tailleMatrice ** 2) {
+                j++
+                Matrice1[j] = []
+            }
+        }
+        // deuxieme matrice
+        j = 0;
+        k = 0;
+        Matrice2[j] = [];
+        Matrice3[j] = [];
+        alert("Matrice 2")
+        for (let i = 0; i < tailleMatrice ** 2; i++) {
+            k = i % tailleMatrice
+            Matrice2[j].push(Number(prompt("Entrer l'élement " + "[" + j + "," + (k) + "]")));
+            //    Somme des matrice
+            Matrice3[j].push(Matrice1[j][k] + Matrice2[j][k]);
+            if (((i + 1) % tailleMatrice) == 0 && (i + 1) < tailleMatrice ** 2) {
+                j++
+                Matrice2[j] = []
+                Matrice3[j] = []
+            }
+        }
+        console.log(Matrice1);
+        console.log(Matrice2);
+        console.log(Matrice3);
+    </script>
+</body>
+
+</html>

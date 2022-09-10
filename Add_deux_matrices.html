@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrice</title>
+</head>
+
+<body>
+    <script>
+        var tailleMatrice;
+        var Matrice1 = [];
+        var Matrice2 = [];
+        var Matrice3 = [];
+        // test tailleMatrice
+        // do {
+        //     tailleMatrice=prompt("taille de la matrice ");
+        //     if (tailleMatrice < 0) {
+        //         alert("Valeur négative")
+        //     }
+        //     else if(tailleMatrice == "")
+        //     {
+        //         alert
+        //     }
+        // } while (condition);
+        // premiere matrice
+        tailleMatrice = prompt("taille de la matrice ");
+        alert("Mattrice 1")
+        for (let i = 0; i < tailleMatrice; i++) {
+            Matrice1[i] = [];
+            Matrice3[i] = [];
+            for (let j = 0; j < tailleMatrice; j++) {
+                Matrice1[i].push(Number(prompt("Entrer l'élement " + "[" + i + "," + j + "]")));
+            }
+        }
+        // deuxieme matrice
+        alert("Matrice 2")
+        for (let i = 0; i < tailleMatrice; i++) {
+            Matrice2[i] = [];
+            // Matrice2.push([]) meme chose que la precedente
+            for (let j = 0; j < tailleMatrice; j++) {
+                Matrice2[i].push(Number(prompt("Entrer l'élement " + "[" + i + "," + j + "]")));
+            }
+        }
+        // calcul de la somme
+        for (let k = 0; k < tailleMatrice; k++) {
+            for (let m = 0; m < tailleMatrice; m++) {
+                Matrice3[k].push(Matrice1[k][m] + Matrice2[k][m]);
+            }
+        }
+        console.log(Matrice1);
+        console.log(Matrice2);
+        console.log(Matrice3);
+        // alert(Matrice1);
+    </script>
+</body>
+
+</html>
